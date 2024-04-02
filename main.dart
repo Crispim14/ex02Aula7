@@ -22,12 +22,10 @@ class ImageDisplay extends StatefulWidget {
 }
 
 class _ImageDisplayState extends State<ImageDisplay> {
-  final String imageUrl = 'https://ih1.redbubble.net/image.4598241582.6557/st,small,507x507-pad,600x600,f8f8f8.jpg';
+  final String imageUrl =
+      'https://ih1.redbubble.net/image.4598241582.6557/st,small,507x507-pad,600x600,f8f8f8.jpg';
 
   void _reloadImage() {
-    // Este método pode ser usado para recarregar a imagem ou realizar outra ação
-    // Atualmente, ele apenas chama setState para forçar a reconstrução da UI
-    // Isso não faz nada neste caso específico, já que a URL da imagem não muda
     setState(() {});
   }
 
@@ -35,10 +33,10 @@ class _ImageDisplayState extends State<ImageDisplay> {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: _reloadImage, // Definindo a ação do botão
-        child: Image.network(imageUrl, fit: BoxFit.cover), // Carregando a imagem da internet
+        onPressed: _reloadImage,
+        child: Image.network(imageUrl, fit: BoxFit.cover),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.zero, // Removendo o padding padrão para o botão abranger a imagem
+          padding: EdgeInsets.zero,
         ),
       ),
     );
